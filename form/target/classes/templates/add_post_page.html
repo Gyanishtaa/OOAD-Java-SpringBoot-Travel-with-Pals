@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Post</title>
+</head>
+<body>
+<h1>Add post</h1>
+<form  method="post" action="/add_post" th:object="${addPostRequest}" enctype="multipart/form-data">
+<label>Photos: </label>
+<input type="file" name="img"  />
+<br>
+<label>Caption: </label>
+<input type="text" name="caption" placeholder="Caption" />
+<br>
+<label>Location: </label>
+<input type="text" name="locatn" placeholder="Location"/>
+    <input type="submit" name="add" placeholder="Add Post"/>
+</form>
+</body>
+</html>

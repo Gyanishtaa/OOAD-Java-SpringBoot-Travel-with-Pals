@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Posts</title>
+</head>
+<body>
+<h1>Added Posts</h1>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Photos</th>
+    <th>Caption</th>
+    <th>Locations</th>
+
+
+  </tr>
+
+  <tr th:each="retrievePost : ${retrievePosts}">
+    <td><span th:text="${retrievePost.id}">Id</span></td>
+<!--    <td><span th:text=""></span></td>-->
+    <td><img width="100" height="100" src="https://cdn.pixabay.com/photo/2015/03/17/02/01/cubes-677092__480.png"/></td>
+    <td><span th:text="${retrievePost.caption}">Caption</span></td>
+    <td><span th:text="${retrievePost.locatn}">Locations</span></td>
+
+  </tr>
+</table>
+<a href="/feed">navigate to feed</a>
+</body>
+</html>

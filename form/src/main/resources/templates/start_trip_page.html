@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Start Trip</title>
+</head>
+<body>
+<h1> Start trip</h1>
+<form  method="post" action="/start_trip" th:object="${startTripRequest}" enctype="multipart/form-data">
+
+    <label>Locations: </label>
+    <input type="text" name="locations"  placeholder="locations"/>
+    <br>
+    <label>Start Date: </label>
+    <input type="date" name="start12_date"  placeholder="Start Date"/>
+    <br>
+    <label>End Date: </label>
+    <input type="date" name="end12_date" placeholder="End Date" />
+    <br>
+    <label>Hotelname: </label>
+    <input type="text" name="hotelname" placeholder="Name of the Hotel" />
+    <br>
+    <label>Travel mode: </label>
+    <input type="text" name="travelmode"  placeholder="Travel Mode"/>
+    <br>
+    <label>Friends: </label>
+    <input type="text" name="friends"  placeholder="Friends"/>
+    <br>
+    <input type="submit" name="add" placeholder="Add Trip"/>
+</form>
+</body>
+</html>

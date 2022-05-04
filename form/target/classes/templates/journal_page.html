@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Journal</title>
+</head>
+<body>
+<h1>Add Journal</h1>
+<form  method="post" action="/journal" th:object="${journalAddRequest}" enctype="multipart/form-data">
+    <label>Title: </label>
+    <input type="text" name="jtitle"  placeholder="Title" />
+    <br>
+    <label>Text: </label>
+    <input type="text" name="text" placeholder="Text" />
+    <br>
+    <label>Location: </label>
+    <input type="text" name="locatn" placeholder="Location"/>
+    <input type="submit" name="add" placeholder="Add Post"/>
+</form>
+</body>
+</html>
+
+
+

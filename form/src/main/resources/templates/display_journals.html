@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Journals</title>
+</head>
+<body>
+<h1>Journals</h1>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Journal Title</th>
+        <th>Text</th>
+        <th>Locations</th>
+    </tr>
+
+    <tr th:each="retrieveJournal : ${retrieveJournals}">
+        <td><span th:text="${retrieveJournal.id}">Id</span></td>
+        <td><span th:text="${retrieveJournal.jtitle}">Journal Title</span></td>
+        <td><span th:text="${retrieveJournal.text}">Text</span></td>
+        <td><span th:text="${retrieveJournal.locatn}">Locations</span></td>
+
+    </tr>
+</table>
+<a href="/feed">navigate to feed</a>
+</body>
+</html>

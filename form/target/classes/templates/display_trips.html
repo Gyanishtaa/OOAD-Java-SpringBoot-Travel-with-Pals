@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Trips Planned</title>
+</head>
+<body>
+<h1>Planned Trips</h1>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Locations</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Hotel Name</th>
+        <th>Travel Mode</th>
+        <th>Friends</th>
+
+    </tr>
+
+    <tr th:each="retrieveTrip : ${retrieveTrips}">
+        <td><span th:text="${retrieveTrip.id}">Id</span></td>
+        <td><span th:text="${retrieveTrip.locations}">Locations</span></td>
+        <td><span th:text="${retrieveTrip.start1_date}">Start Date</span></td>
+        <td><span th:text="${retrieveTrip.end1_date}">End Date</span></td>
+        <td><span th:text="${retrieveTrip.hotelname}">Hotel Name</span></td>
+        <td><span th:text="${retrieveTrip.travelmode}">Travel Mode</span></td>
+        <td><span th:text="${retrieveTrip.friends}">Friends</span></td>
+    </tr>
+</table>
+<a href="/feed">navigate to feed</a>
+</body>
+</html>
